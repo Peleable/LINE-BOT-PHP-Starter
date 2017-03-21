@@ -1,3 +1,5 @@
+$proxy = 'http://fixie:Hr2JXteynC46Il0@velodrome.usefixie.com:80';
+$proxyauth = 'http://fixie:Hr2JXteynC46Il0@velodrome.usefixie.com:80';
 <?php
 $access_token = 'SD1b0qRCgjATTTQlAr4kN5MJyozdhVYSYH0BhoDlkDHtH1bEJLRlApJcPIfUXfUyaa+x3wTi+o0kIzEtY5ZV7pSuKpgCg0ZbSfAXNCt984ej9B/eKo18qDKbVRvLUxav43nupUce4FM6b2Eta1L9rwdB04t89/1O/w1cDnyilFU=';
 
@@ -31,6 +33,8 @@ if (!is_null($events['events'])) {
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
+			curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
