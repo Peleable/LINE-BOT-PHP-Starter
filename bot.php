@@ -1,5 +1,5 @@
-$proxy = 'http://fixie:Hr2JXteynC46Il0@velodrome.usefixie.com:80';
-$proxyauth = 'http://fixie:Hr2JXteynC46Il0@velodrome.usefixie.com:80';
+//$proxy = 'http://fixie:Hr2JXteynC46Il0@velodrome.usefixie.com:80';
+//$proxyauth = 'http://fixie:Hr2JXteynC46Il0@velodrome.usefixie.com:80';
 <?php
 $access_token = 'SD1b0qRCgjATTTQlAr4kN5MJyozdhVYSYH0BhoDlkDHtH1bEJLRlApJcPIfUXfUyaa+x3wTi+o0kIzEtY5ZV7pSuKpgCg0ZbSfAXNCt984ej9B/eKo18qDKbVRvLUxav43nupUce4FM6b2Eta1L9rwdB04t89/1O/w1cDnyilFU=';
 
@@ -12,9 +12,9 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if ($event['type'] == 'pele' && $event['pele']['type'] == 'Hi there!') {
 			// Get text sent
-			$text = $event['message']['text'];
+			$text = $event['pele']['Hi there'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
